@@ -20,5 +20,11 @@ pipeline {
                 sh "docker tag jenkins-demo:${BUILD_NUMBER} jenkins-demo:latest"
             }
         }
+        
+        stage('run-container-from-image') {
+            steps {
+                sh "docker run -d -p 80:80 jenkins-demo:${BUILD_NUMBER}"
+            }
+        }
     }
 }

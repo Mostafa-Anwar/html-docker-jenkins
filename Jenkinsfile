@@ -1,6 +1,6 @@
 node('docker-agent') {
     stage('grab-code') {
-        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/aossama/simple-html-app.git']]])
+        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/Mostafa-Anwar/simple-html-app.git']]])
     }
     
     stage('build-image') {

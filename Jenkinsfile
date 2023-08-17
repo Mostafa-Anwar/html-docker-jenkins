@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('grab-code') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/feat/add-blaa']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/Mostafa-Anwar/simple-html-app.git']]])            }
+                checkout([$class: 'GitSCM', branches: [[name: '*/master'], [[name: '*/feat/add-blaa']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/Mostafa-Anwar/simple-html-app.git']]])            }
         }
         
         stage('build-image') {

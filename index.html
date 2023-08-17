@@ -5,7 +5,33 @@
     <title>Simple HTML App</title>
 </head>
 <body>
-    <h1>Simple HTML App</h1>
-    <p>My first containerized HTML application</p>
+    <h1>Hello</h1>
+    <p>This is Meep</p>
+
+    <button onclick="showIndex()">Home</button>
+    <button onclick="showAbout()">About</button>
+
+    <div id="indexPage">
+        <!-- Contents of index.html -->
+        <h1>Simple HTML App</h1>
+        <p>My containerized HTML application</p>
+    </div>
+
+    <div id="aboutPage" style="display: none;">
+        <!-- Contents of about.html -->
+        <p>This is ran with CICD!</p>
+    </div>
+
+    <script>
+        function showIndex() {
+            document.getElementById("indexPage").style.display = "block";
+            document.getElementById("aboutPage").style.display = "none";
+        }
+
+        function showAbout() {
+            document.getElementById("indexPage").style.display = "none";
+            document.getElementById("aboutPage").style.display = "block";
+        }
+    </script>
 </body>
 </html>
